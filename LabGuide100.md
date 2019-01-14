@@ -25,13 +25,13 @@ For this lab you will need:
 
 
 ## STEP 1: Provision Iaas VM
-After the cloud account is created,log in to your cloud account
+- Log in to the cloud account which you just created
 ![](images/login.jpg)
 
 - Click on thd **MENU** on the left top and click on **Compute**
   ![](images/computeinstance.png)
 
-- After you opened the **Compute** page, pick one COMPARTMENT on the left corner  
+- After you opened the **Compute** page, pick one **COMPARTMENT** on the left corner  
   ![](images/compartment.jpg)
   
 - Click on **Create an Instance**
@@ -49,8 +49,7 @@ After the cloud account is created,log in to your cloud account
 - Keep all other values to default and click on **Create Instance**. After several minutes, your new Oracle Linux instance will be running
   ![](images/5.png)
   ![](images/ssh.jpg)
-  **NOTE** Your Oracle Linux is now ready for the Gateway installation. Click on the newly created instance and note down    
-  the primary information, such as Private and Public IP Address. 
+  **NOTE** Your Oracle Linux is now ready for the Gateway installation. Click on the newly created instance and note down the primary information, such as Private and Public IP Address. 
   ![](images/6.png)
 
 ## STEP 2: Create a Console Connection 
@@ -79,7 +78,7 @@ After the cloud account is created,log in to your cloud account
 - Search the **Oracle Autonomous API Platform Cloud Service** and click on it
   ![](images/apipcs.jpg)
 
-- Create an instance locating on the right
+- Create an instance by clicking the **Create** located on the right corner
   ![](images/createapiinstance.jpg)
  
 - Fill out all the information it needed and click on **Next**
@@ -88,7 +87,7 @@ After the cloud account is created,log in to your cloud account
 - Confrim all the information and hit **Create**
   ![](images/createapiinstance3.jpg)
  
-- After the instance created, click on the hamburger and choose **Access API Platform Service Instance**
+- After the instance created, click on the **hamburger** shape button and choose **Access API Platform Service Instance**
   ![](images/openapiplatform.jpg)
   
   
@@ -99,7 +98,7 @@ After the cloud account is created,log in to your cloud account
 
 - Give it a good name and description. Then click **Create**
 
-- Your new Logical Gateway will be created. Click on it
+- Now your new Logical Gateway is creating, click on it after it's done
 
 - On the left vertical menu, click on **Nodes** and then **Download Gateway Installer**
 ![](images/13.jpg)
@@ -110,20 +109,20 @@ After the cloud account is created,log in to your cloud account
 
 - In Step 2, set the next values:
 
-  (1) Give it a good Gateway name and description
+  (1) Give it a good Gateway **Name** and **Description**
 
-  (2) **Listen IP Address**: Enter the internal IP Address of your OL 6.10 VM – You can get it by going back to Compute   
-  classic dashboard and look at the Private IT for your Oracle Linux VM created previously
+  (2) **Listen IP Address**: Enter the internal IP Address of your OL 6.10 VM 
 
-  (3) **Published Address**: This time enter the Public IP Address assigned to the Oracle Linux VM.
-
+  (3) **Published Address**: Enter the public IP Address of your OL 6.q0 VM
+  > You can get them by going back to Compute classic dashboard and look for them
+  
   (4) Proxy settings if needed
 
-  (5) **Node Installation Directory**: Enter a location where you want to install your API Gateway within the Oracle Linux  
-  VM. **Suggested: /home/opc/apigateway/install**
+  (5) **Node Installation Directory**: Enter a location where you want to install your API Gateway within the Oracle Linux VM. 
+    **Suggested: /home/opc/apigateway/install**
 
-  (6) **Installation Archive Location**: Enter the location where you are planning to have your (perhaps still downloading)   
-  API Gateway. **Suggested: /home/opc/apigateway/downloads**
+  (6) **Installation Archive Location**: Enter the location where you are planning to have your API Gateway. 
+    **Suggested: /home/opc/apigateway/downloads**
     
     > Make sure you create this directory beforehand and unzip your downloaded API Gateway there.
     
@@ -143,7 +142,7 @@ After the cloud account is created,log in to your cloud account
 - Go to the Roles tab and click on the button **Add Admin Roles**. This action adds all admin roles to the current user
 
 
- **Next We will be creating different types of users in Oracle Identity Cloud Service (IDCS), that is the underlying Identity Directory for Oracle Public Cloud Services**
+ **Now you will be creating different types of users in Oracle Identity Cloud Service (IDCS), which is the underlying Identity Directory for Oracle Public Cloud Services**
 
 - Go to the IDCS console, one way you can do it is by clicking on **Users**, located at the top right of almost any console
 
@@ -157,40 +156,38 @@ After the cloud account is created,log in to your cloud account
 
 - Click on **Finish**
 
-![](images/25.png)
+    ![](images/25.png)
 
-- Repeat the steps and add another group. This time it is for Developers
+- Repeat the previous steps and add another **Developers group**. 
 
-    > Your 2 groups should be visible now. Now, use the top left burger menu again to go to Users.
+> **If your API Manager/Developer users are not created, you need to create user profile next.**
 
-- Click on **+Add** to create a new API Manager user
+- Use the top left hamburger menu again to go to **Users**.
+- Click on **+Add** to create a new user
 - Enter:
-**First Name**: API
-**Last Name**: Manager
-**User Name**: API_Mgr_User
+**First Name**: XXX (e.g. API)
+**Last Name**: XXX (e.g. Manager)
+**User Name**: XXX (e.g. API_Mgr_User or use your email as username)
 **Email**: Make sure you enter a real email, as you will immediately receive and email to activate your user account and set the password.
 
 - Make a note on the Username that you choose. You will need it later. When ready, click **Next**
-- Choose the Manager’s group that you created previously. Then when done click **Finish**
+- Choose the Manager’s group that you created previously, then click **Finish**
 
 - You should get a successful message 
 
 ![](images/29.png)
 
-Now, create another user, this time associate it to the Developer’s group. Enter the following values:
+- Click on **+Add** to create another user for Developer's group
+- Enter the following values:
+    **First Name**: XXX (e.g. API)
+    **Last Name**: XXX (e.g. Developer)
+    **User Name**: XXX (e.g. API_Dev_User or use your email as username)
+    **Email**: Make sure you enter a real email, as you will immediately receive and email to activate your user account and set the password.
+    ![](images/30.png)
 
-**First Name**: API
+- Now, go back to the top left burger menu and select **Applications**
 
-**Last Name**: Developer
-
-**User Name**: API_Dev_User
-
-**Email**: Make sure you enter a real email, as you will immediately receive and email to activate your user account and set the password
-![](images/30.png)
-
-- Now, go back to the top left burger menu and this time select **Applications**
-
-- Locate and click on the Application that corresponds to the Autonomous API Platform environment that you provisioned previously
+- Locate and click on the Application that corresponds to the Autonomous API Platform environment that you provisioned in Step 4
 
 - Click on **Application Roles** tab
 - For simplicity purposes, add your API Managers group to at least **APIManager**, **GatewayManager** and **GatewayRuntime**. Do this by clicking on each of the role’s right end burger menu
@@ -204,19 +201,27 @@ Now, create another user, this time associate it to the Developer’s group. Ent
 
 ## STEP 6: Deploy an API Gateway – Install and configure Physical API Gateway
 
-- Use a File Transfer tool such as FileZilla to copy files from the local machine to the VM instance
+- Use a File Transfer tool such as FileZilla (Mac) or MoBaXTerm (Windows) to copy files from the local machine to the VM instance
 ![](images/35.png)
-
-- Assuming that you already finished downloading the actual API Gateway zip file. Make sure you unzipped it in the specified location during step 2 of the wizard.
-
-  ***Important: Replace the gateway-props.json file that is at the root of the just unzipped API gateway by the one that you 
-  just downloaded as a product of the Wizard.**
 
 - Connect to the Oracle Linux instance using the terminal. Change the directory to the location for the SSH keys
 
 - Then, run the following command. Use the Public IP assigned to your VM instance:
 
-  > $ ssh -i oci_instance opc@[public IP address]
+  **$ ssh -i oci_instance opc@[your public IP address]**
+  
+- After you logged into your VM, use the following command to create a **APIGateway** folder which contains **install** folder and **downloads** folder
+    
+    **$ mkdir APIGateway**
+    **$ cd APIGateway --> mkdir downloads --> mkdir install**
+
+
+
+- Upload the API Gateway Zip file you just downloaded to the FileZilla (Make sure you unzipped it in the specified location during step 2 of the wizard).
+
+  ***Important: Replace the gateway-props.json file that is at the root of the just unzipped API gateway by the one that you just downloaded as a product of the Wizard.**
+
+
 
 - If not already done, install Oracle certified JDK 1.8+ and set JAVA_HOME.
 
