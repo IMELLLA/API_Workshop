@@ -26,7 +26,7 @@ For this lab you will need:
 
 ## STEP 1: Provision Iaas VM
 - Log in to the cloud account which you just created
-![](images/login.jpg)
+![](images/signin.png)
 
 - Click on thd **MENU** on the left top and click on **Compute**
   ![](images/computeinstance.png)
