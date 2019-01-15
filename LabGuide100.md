@@ -29,28 +29,25 @@ For this lab you will need:
 ![](images/signin.png)
 
 - Click on thd **MENU** on the left top and click on **Compute**
-  ![](images/computeinstance.png)
+  ![](images/compute.png)
 
 - After you opened the **Compute** page, pick one **COMPARTMENT** on the left corner  
-  ![](images/compartment.jpg)
+  ![](images/compartment.png)
   
 - Click on **Create an Instance**
-  ![](images/createinstance.jpg)
+  ![](images/xxx)
 
 - Enter the following values in the Create Instance dialog
 (1)	**Name**: XX_OL610 (Replace XX with your initials)
 (2)	**Image Operating System**: Oracle Linux 6.10
-  ![](images/computeinstance.jpg)
+  ![](images/xxx)
 (3)	**SSH Keys**: Choose SSH Key Files
 (4)	Click on **Browse** and select the local public key (e.g. oci_instance.pub)
-  ![](images/3.png)
-  ![](images/4.png)
-  
-- Keep all other values to default and click on **Create Instance**. After several minutes, your new Oracle Linux instance will be running
-  ![](images/5.png)
-  ![](images/ssh.jpg)
+(5) Keep all other values to default and click on **Create Instance**. After several minutes, your new Oracle Linux instance will be running
+  ![](images/createinstance.png)
+
   **NOTE** Your Oracle Linux is now ready for the Gateway installation. Click on the newly created instance and note down the primary information, such as Private and Public IP Address. 
-  ![](images/6.png)
+  ![](images/xxx)
 
 ## STEP 2: Create a Console Connection 
 
