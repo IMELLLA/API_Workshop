@@ -35,12 +35,12 @@ For this lab you will need:
   ![](images/compartment.png)
   
 - Click on **Create an Instance**
-  ![](images/xxx)
+  ![](images/createinstance.png)
 
 - Enter the following values in the Create Instance dialog
 (1)	**Name**: XX_OL610 (Replace XX with your initials)
-(2)	**Image Operating System**: Oracle Linux 6.10
-  ![](images/xxx)
+(2)	**Image Operating System**: Oracle Linux 7.6 
+  ![](images/createinstance2.png)
 (3)	**SSH Keys**: Choose SSH Key Files
 (4)	Click on **Browse** and select the local public key (e.g. oci_instance.pub)
 (5) Keep all other values to default and click on **Create Instance**. After several minutes, your new Oracle Linux instance will be running
