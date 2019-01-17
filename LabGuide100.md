@@ -66,7 +66,20 @@ For this lab you will need:
 
 
 ## STEP 3: Allow inbound connections to the Linux instance
-- Run the following commands in the terminal:
+- Stay on the Instance detial page, click on the **Subnet**
+  ![](images/subnet.png)
+  
+- Open the **Default Security List for des-vsn**
+  ![](images/securitylist.png)
+  
+- Click the **Edit All Rules** on the top
+  ![](images/editrules.png)
+  
+- The rules page will open which contains 3 default rules and **Add Ingress Rule**
+  ![](images/ingressrule.png)
+  ![](images/ingressrule2.png)
+
+- Open your Terminal Run (Mac) or  the following commands in the terminal:
     > iptables -I INPUT 1 -p tcp --dport 8011 -j ACCEPT
     > iptables -I INPUT 1 -p tcp --dport 9022 -j ACCEPT
 - Go back to your **Compute**-> **Network**-> **Resource**-> **Ingress Rule**, add three Ingress Rules [Port Range are 22, 80, and 443]
