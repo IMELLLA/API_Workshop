@@ -44,12 +44,12 @@ For this lab you will need:
 (3)	**SSH Keys**: Choose SSH Key Files
 (4)	Click on **Browse** and select the local public key (e.g. oci_instance.pub)
 (5) Keep all other values to default and click on **Create Instance**. After several minutes, your new Oracle Linux instance will be running
-  ![](images/createinstance.png)
+  ![](images/createinstance3.png)
 
   **NOTE** Your Oracle Linux is now ready for the Gateway installation. Click on the newly created instance and note down the primary information, such as Private and Public IP Address. 
-  ![](images/xxx)
 
-## STEP 2: Create a Console Connection 
+
+## STEP 2: Create a Console Connection for Mac User 
 
  We will now create a Console Connection, which allows us to use an SSH connection to the instance host. 
 
@@ -64,6 +64,7 @@ For this lab you will need:
     > iptables -I INPUT 1 -p tcp --dport 9022 -j ACCEPT
 - Go back to your **Compute**-> **Network**-> **Resource**-> **Ingress Rule**, add three Ingress Rules [Port Range are 22, 80, and 443]
 ![](images/gwVCN.PNG)
+
 
 
 ## STEP 4: Setup API Gateway
@@ -213,13 +214,6 @@ For this lab you will need:
     **$ cd APIGateway --> mkdir downloads --> mkdir install**
 
 
-
-- Upload the API Gateway Zip file you just downloaded to the FileZilla (Make sure you unzipped it in the specified location during step 2 of the wizard).
-
-  ***Important: Replace the gateway-props.json file that is at the root of the just unzipped API gateway by the one that you just downloaded as a product of the Wizard.**
-
-
-
 - If not already done, install Oracle certified JDK 1.8+ and set JAVA_HOME.
 
   -- Download the JDK file. Copy the file to the OL instance (use FileZilla) in the folder **/home/opc/java**
@@ -231,6 +225,15 @@ For this lab you will need:
   -- Set **JAVA_HOME**. Edit the **.bash_profile**
     
   -- Test it
+
+
+- move zip file under downloads
+unzip it
+replace default gateway.json with new one
+- Upload the API Gateway Zip file you just downloaded to the FileZilla (Make sure you unzipped it in the specified location during step 2 of the wizard).
+
+  ***Important: Replace the gateway-props.json file that is at the root of the just unzipped API gateway by the one that you just downloaded as a product of the Wizard.**
+
 
 - Run >./APIGateway -f gateway-props.json -a install-configure-start-join command. When prompted:
   -- Please enter user name for weblogic domain,representing the gateway node: **weblogic** + [ENTER]
