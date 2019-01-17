@@ -79,52 +79,47 @@ For this lab you will need:
   ![](images/ingressrule.png)
   ![](images/ingressrule2.png)
 
-- Open your Terminal Run (Mac) or  the following commands in the terminal:
+- Additionally, open your Terminal(Mac) or Command Line(Windows)and run the following commands in the terminal:
     > iptables -I INPUT 1 -p tcp --dport 8011 -j ACCEPT
+    
     > iptables -I INPUT 1 -p tcp --dport 9022 -j ACCEPT
-- Go back to your **Compute**-> **Network**-> **Resource**-> **Ingress Rule**, add three Ingress Rules [Port Range are 22, 80, and 443]
-![](images/gwVCN.PNG)
-
 
 
 ## STEP 4: Setup API Gateway
  Now that we have provisioned an Oracle Linux environment, we are going to use it to continue installing an Oracle API Gateway and configure it to join our Autonomous API Platform instance. First let’s create the Logical Gateway configuration in our API Platform Management console. This is the space through which the physical API gateway will be in constant management and synchronization.
 
 - Click on **MENU** on the left top, and choose **My Services Dashboard** under **Administration**
-  ![](images/dashboard.jpg)
+  ![](images/servicedashboard.png)
   
 - Search the **Oracle Autonomous API Platform Cloud Service** and click on it
-  ![](images/apipcs.jpg)
+  ![](images/apipcs.png)
 
 - Create an instance by clicking the **Create** located on the right corner
-  ![](images/createapiinstance.jpg)
+  ![](images/apiinstance.png)
  
 - Fill out all the information it needed and click on **Next**
-  ![](images/createapiinstance2.jpg)
+  ![](images/createapiinstance.png)
   
 - Confrim all the information and hit **Create**
-  ![](images/createapiinstance3.jpg)
+  ![](images/createapiinstance2.png)
  
 - After the instance created, click on the **hamburger** shape button and choose **Access API Platform Service Instance**
-  ![](images/openapiplatform.jpg)
+  ![](images/apiplatform.png)
   
-  
-- Click on the top left burger menu and select **Gateways**
-
-- Click on **Create**
-
+- Click on the top left burger menu, select **Gateways**, and click on **Create**
+  ![](images/gateway.png)
 
 - Give it a good name and description. Then click **Create**
-
+  ![](images/creategateway.png)
+  
 - Now your new Logical Gateway is creating, click on it after it's done
-
-- On the left vertical menu, click on **Nodes** and then **Download Gateway Installer**
-![](images/13.jpg)
-
-- While it finishes downloading, click on **Open Installation Wizard**, it will help us build the properties file required to install and configure our physical API GW once downloaded
+  ![](images/gatewaycreated.png)
+  
+- On the left vertical menu, click on **Nodes** and then click on **Open Installation Wizard**, it will help us build the properties file required to install and configure our physical API GW once downloaded
+  ![](images/node.png)
 
 - The Wizard will help us get all parameters auto-populated. Review and click **Next** button
-
+  
 - In Step 2, set the next values:
 
   (1) Give it a good Gateway **Name** and **Description**
@@ -145,15 +140,17 @@ For this lab you will need:
     > Make sure you create this directory beforehand and unzip your downloaded API Gateway there.
     
 - Review your parameters and if all is right, click on the **Next** arrow.
-
+  ![](images/node2.png)
+  
 - In Step 3, we are not setting anything else. Just take a note of the ports that your API Gateway will be using. This will be useful later. When done click on the **Next** arrow
-
+  ![](images/node3.png)
+  
 - In Step 4. Click **Download file** to get the configuration properties file. Then, click **Done** to finish
-![](images/20.png)
+  ![](images/node4.png)
 
 ## STEP 5: Add Additional Roles to cloud.admin 
 - Open the Cloud Dashboard and click on **Users**
-![](images/21.png)
+  ![](images/xxx.png)
 
 - Select the hamburger menu of Cloud Admin and click **Edit**
 
