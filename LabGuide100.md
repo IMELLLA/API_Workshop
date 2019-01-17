@@ -47,16 +47,23 @@ For this lab you will need:
   ![](images/createinstance3.png)
 
   **NOTE** Your Oracle Linux is now ready for the Gateway installation. Click on the newly created instance and note down the primary information, such as Private and Public IP Address. 
-
+  ![](images/.png)
 
 ## STEP 2: Create a Console Connection for Mac User 
 
  We will now create a Console Connection, which allows us to use an SSH connection to the instance host. 
 
-- In the bottom left menu under Resources, click on **Console Connections**. Use the provided SSH key to setup the console connection
+- On the instance page, click on the instance you just created
+  ![](images/instancedetail.png)
+
+- In the bottom left menu under **Resources**, click on **Console Connections** 
+  ![](images/consoleconnection.png)
+  
+-Use the provided SSH key to setup the console connection
+  ![](images/consoleconnection2.png)
 
 - When complete, the Console Connection will be in Active state
-![](images/7.png)
+
 
 ## STEP 3: Allow inbound connections to the Linux instance
 - Run the following commands in the terminal:
