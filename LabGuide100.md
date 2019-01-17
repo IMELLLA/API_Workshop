@@ -64,6 +64,8 @@ For this lab you will need:
 
 - When complete, the Console Connection will be in Active state
 
+> Save a note of your **public IP** and **private IP** of your instance here, which will be needed soon. 
+  ![](images/ips.png)
 
 ## STEP 3: Allow inbound connections to the Linux instance
 - Stay on the Instance detial page, click on the **Subnet**
@@ -124,10 +126,10 @@ For this lab you will need:
 
   (1) Give it a good Gateway **Name** and **Description**
 
-  (2) **Listen IP Address**: Enter the internal IP Address of your OL 6.10 VM 
+  (2) **Listen IP Address**: Enter the internal IP Address you noted in Step 2
 
-  (3) **Published Address**: Enter the public IP Address of your OL 6.q0 VM
-  > You can get them by going back to Compute classic dashboard and look for them
+  (3) **Published Address**: Enter the public IP Address you noted in Step 2
+  > You also can get them by going back to Compute classic dashboard.
   
   (4) Proxy settings if needed
 
@@ -137,9 +139,7 @@ For this lab you will need:
   (6) **Installation Archive Location**: Enter the location where you are planning to have your API Gateway. 
     **Suggested: /home/opc/apigateway/downloads**
     
-    > Make sure you create this directory beforehand and unzip your downloaded API Gateway there.
-    
-- Review your parameters and if all is right, click on the **Next** arrow.
+    > Review your parameters and if all is right, click on the **Next** arrow.
   ![](images/node2.png)
   
 - In Step 3, we are not setting anything else. Just take a note of the ports that your API Gateway will be using. This will be useful later. When done click on the **Next** arrow
@@ -148,37 +148,34 @@ For this lab you will need:
 - In Step 4. Click **Download file** to get the configuration properties file. Then, click **Done** to finish
   ![](images/node4.png)
 
-## STEP 5: Add Additional Roles to cloud.admin 
-- Open the Cloud Dashboard and click on **Users**
-  ![](images/xxx.png)
+## STEP 5 : Add API Manager and Developer Groups and Users (optional)
 
-- Select the hamburger menu of Cloud Admin and click **Edit**
+ You need to be admin roles to be able to create different types of groups and users in Oracle Identity Cloud Service (IDCS)
 
-- Go to the Roles tab and click on the button **Add Admin Roles**. This action adds all admin roles to the current user
-
-
- **Now you will be creating different types of users in Oracle Identity Cloud Service (IDCS), which is the underlying Identity Directory for Oracle Public Cloud Services**
-
-- Go to the IDCS console, one way you can do it is by clicking on **Users**, located at the top right of almost any console
+- Go back to the Dashboard and click **Users** on the top
+  ![](images/cloudadmin.png)
 
 - Click on the **Identity Console** button at the top right
 
-- Once in the IDCS console, click on the top left burger menu and then click on **Groups**
-
+- Click on the top left burger menu and then click on **Groups**
+  ![](images/group.png)
+  
 - Click on **+Add** to create a new Group for Managers 
-
-- Give it a good name and description
+  ![](images/xxx.png)
+  
+- The **Add Group** window will open and fill a good name and description
+  ![](images/xxx.png)
 
 - Click on **Finish**
-
-    ![](images/25.png)
+  ![](images/xxx.png)
 
 - Repeat the previous steps and add another **Developers group**. 
 
 > **If your API Manager/Developer users are not created, you need to create user profile next.**
 
-- Use the top left hamburger menu again to go to **Users**.
-- Click on **+Add** to create a new user
+- Use the top left hamburger menu again to go to **Users**, and click on **+Add** to create a new user
+  ![](images/xxx.png)
+  
 - Enter:
 **First Name**: XXX (e.g. API)
 **Last Name**: XXX (e.g. Manager)
@@ -186,11 +183,14 @@ For this lab you will need:
 **Email**: Make sure you enter a real email, as you will immediately receive and email to activate your user account and set the password.
 
 - Make a note on the Username that you choose. You will need it later. When ready, click **Next**
-- Choose the Manager’s group that you created previously, then click **Finish**
+  ![](images/xxx.png)
 
+- Choose the Manager’s group that you created previously, then click **Finish**
+  ![](images/xxx.png)
+  
 - You should get a successful message 
 
-![](images/29.png)
+  ![](images/xxx.png)
 
 - Click on **+Add** to create another user for Developer's group
 - Enter the following values:
