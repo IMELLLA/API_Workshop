@@ -209,49 +209,56 @@ For this lab you will need:
 ## STEP 7: Deploy an API Gateway – Install and configure Physical API Gateway
 
 - Use a File Transfer tool such as FileZilla (Mac) or MoBaXTerm (Windows) to copy files from the local machine to the VM instance
-![](images/35.png)
+  ![](images/filezila.png)
 
-- Connect to the Oracle Linux instance using the terminal. Change the directory to the location for the SSH keys
+- Open your Terminal(Mac) or Command Line(Windows). Change the directory to the location for the SSH keys
+  ![](images/terminal.png)
+  
+- Run the following command to connect to the Oracle Linux instance:
 
-- Then, run the following command. Use the Public IP assigned to your VM instance:
+  **$ ssh -i oci_instance opc@[your public IP address from Step 2]**
 
-  **$ ssh -i oci_instance opc@[your public IP address]**
-
-- Additionally, open your Terminal(Mac) or Command Line(Windows)and run the following commands in the terminal:
+- Additionally, run the following command to open the firewall of your instance:
     > iptables -I INPUT 1 -p tcp --dport 8011 -j ACCEPT
     
     > iptables -I INPUT 1 -p tcp --dport 9022 -j ACCEPT
-    
-    
-- After you logged into your VM, use the following command to create a **APIGateway** folder which contains **install** folder and **downloads** folder
-    
-    **$ mkdir APIGateway**
-    **$ cd APIGateway --> mkdir downloads --> mkdir install**
 
-
+  
 - If not already done, install Oracle certified JDK 1.8+ and set JAVA_HOME.
 
-  -- Download the JDK file. Copy the file to the OL instance (use FileZilla) in the folder **/home/opc/java**
+  -- Download the JDK file. 
+  -- Copy the JDK file to the OL instance (use FileZilla) in the folder **/home/opc/java**
   
   -- Install the JDK with yum localinstall
+    > $ sudo yum localinstall jdk-8u181-linux-x64.rpm
   
-  -- Verify the installation with java -version. JDK will be installed under: **/usr/java/jdk1.8.0_181-amd64**
+  -- Verify the JDK will be installed under **/usr/java/jdk1.8.0_181-amd64**
+    > $ java -version
   
   -- Set **JAVA_HOME**. Edit the **.bash_profile**
+     ![](images/javahome2.tiff)
     
   -- Test it
 
+- Now, run the codes to create **APIGateway** folder on FileZila which contains **install** folder and **downloads** folder
+    
+    **$ mkdir APIGateway**
+    **$ cd APIGateway --> mkdir downloads --> mkdir install**
+- move the zipped ApicsGatewayInstaller file under downloads on FileZila
+    ![](images/filezila2.tiff)
+    
+- unzip the ApicsGatewayInstaller file
 
-- move zip file under downloads
-unzip it
-replace default gateway.json with new one
-- Upload the API Gateway Zip file you just downloaded to the FileZilla (Make sure you unzipped it in the specified location during step 2 of the wizard).
+- replace default gateway.json file with the one you downloaded in Step 4
 
   ***Important: Replace the gateway-props.json file that is at the root of the just unzipped API gateway by the one that you just downloaded as a product of the Wizard.**
 
 
-- Run >./APIGateway -f gateway-props.json -a install-configure-start-join command. When prompted:
-  -- Please enter user name for weblogic domain,representing the gateway node: **weblogic** + [ENTER]
+- Run the following command to start the install:
+  > $ ./APIGateway -f gateway-props.json -a install-configure-start-join 
+
+When prompted:
+  -- Please enter user name for weblogic domain,representing the gateway node: **weblogic** 
   
   -- Password: **welcome1**
     
@@ -273,7 +280,8 @@ replace default gateway.json with new one
 
     >Note: For some reason I got an error saying that it could not find the original Gateway (100) that I originally indicated in the gateway-props.json. I don’t know why? I got around it by saying yes when it asked me to create-join instead. I will investigate this issue and come back here. In the meantime, selecting y + [ENTER] to create-join the node instead got me going to the end.
     
-
+    ![](images/terminal3.tiff)
+    
 **Now, the whole installation process should complete successfully! You can continue to next workshop.**
 
 
