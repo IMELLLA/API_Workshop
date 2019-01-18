@@ -81,10 +81,7 @@ For this lab you will need:
   ![](images/ingressrule.png)
   ![](images/ingressrule2.png)
 
-- Additionally, open your Terminal(Mac) or Command Line(Windows)and run the following commands in the terminal:
-    > iptables -I INPUT 1 -p tcp --dport 8011 -j ACCEPT
-    
-    > iptables -I INPUT 1 -p tcp --dport 9022 -j ACCEPT
+
 
 
 ## STEP 4: Setup API Gateway
@@ -156,12 +153,10 @@ For this lab you will need:
   ![](images/cloudadmin.png)
 
 - Click on the **Identity Console** button at the top right
-  ![](images/identityconsole.png)
+  ![](images/identityconcole.png)
   
-- Click on the top left burger menu and then click on **Groups**
+- Click on the top left burger menu and then click on **Groups**, click **+Add**
   ![](images/group.png)
-  
-- Click on **+Add** to create a new Group for Managers 
   
 - The **Add Group** window will open and fill a good name and description, then hit **Finish**
   ![](images/creategroup.png)
@@ -221,7 +216,13 @@ For this lab you will need:
 - Then, run the following command. Use the Public IP assigned to your VM instance:
 
   **$ ssh -i oci_instance opc@[your public IP address]**
-  
+
+- Additionally, open your Terminal(Mac) or Command Line(Windows)and run the following commands in the terminal:
+    > iptables -I INPUT 1 -p tcp --dport 8011 -j ACCEPT
+    
+    > iptables -I INPUT 1 -p tcp --dport 9022 -j ACCEPT
+    
+    
 - After you logged into your VM, use the following command to create a **APIGateway** folder which contains **install** folder and **downloads** folder
     
     **$ mkdir APIGateway**
