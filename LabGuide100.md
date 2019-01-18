@@ -156,65 +156,62 @@ For this lab you will need:
   ![](images/cloudadmin.png)
 
 - Click on the **Identity Console** button at the top right
-
+  ![](images/identityconsole.png)
+  
 - Click on the top left burger menu and then click on **Groups**
   ![](images/group.png)
   
 - Click on **+Add** to create a new Group for Managers 
-  ![](images/xxx.png)
   
-- The **Add Group** window will open and fill a good name and description
-  ![](images/xxx.png)
-
-- Click on **Finish**
-  ![](images/xxx.png)
+- The **Add Group** window will open and fill a good name and description, then hit **Finish**
+  ![](images/creategroup.png)
 
 - Repeat the previous steps and add another **Developers group**. 
-
+  ![](images/creategroup2.png)
+  
 > **If your API Manager/Developer users are not created, you need to create user profile next.**
 
 - Use the top left hamburger menu again to go to **Users**, and click on **+Add** to create a new user
-  ![](images/xxx.png)
+  ![](images/user.png)
   
 - Enter:
 **First Name**: XXX (e.g. API)
 **Last Name**: XXX (e.g. Manager)
 **User Name**: XXX (e.g. API_Mgr_User or use your email as username)
 **Email**: Make sure you enter a real email, as you will immediately receive and email to activate your user account and set the password.
+  ![](images/createuser.png)
 
-- Make a note on the Username that you choose. You will need it later. When ready, click **Next**
-  ![](images/xxx.png)
-
-- Choose the Manager’s group that you created previously, then click **Finish**
-  ![](images/xxx.png)
+- Click **Next**, and choose the Manager’s group that you created previously, then click **Finish**
+  ![](images/createuser2.png)
   
-- You should get a successful message 
+  > You should get a successful message. Similarly, you can create multiple users based on your need. 
 
-  ![](images/xxx.png)
 
-- Click on **+Add** to create another user for Developer's group
-- Enter the following values:
-    **First Name**: XXX (e.g. API)
-    **Last Name**: XXX (e.g. Developer)
-    **User Name**: XXX (e.g. API_Dev_User or use your email as username)
-    **Email**: Make sure you enter a real email, as you will immediately receive and email to activate your user account and set the password.
-    ![](images/30.png)
+## STEP 6: Give Group/User Access to the API 
 
-- Now, go back to the top left burger menu and select **Applications**
-
+- Go back to the top left burger menu and select **Applications**
+  ![](images/application.png)
+  
 - Locate and click on the Application that corresponds to the Autonomous API Platform environment that you provisioned in Step 4
-
+  ![](images/application2.png)
+  
 - Click on **Application Roles** tab
+  ![](images/applicationroles.png)
+  
 - For simplicity purposes, add your API Managers group to at least **APIManager**, **GatewayManager** and **GatewayRuntime**. Do this by clicking on each of the role’s right end burger menu
-
+  ![](images/applicationroles.png)
+  ![](images/assigngroup.png)
     >Note: This is just a simple test configuration. You might need to tighten your security for your own environments
+    
 - Now, click on the burger menu for **ApplicationDeveloper** and add your Developers group
-
+  ![](images/developergroup.png)
+  
 - Taking advantage that we are here, click on the Configuration tab and copy to a safe place. We will need them to join the API Gateway in the next section
 -- Client ID
 -- Client Secret
-
-## STEP 6: Deploy an API Gateway – Install and configure Physical API Gateway
+  ![](images/client.png)
+  
+## STEP 7: Deploy an API Gateway – Install and configure Physical API Gateway
 
 - Use a File Transfer tool such as FileZilla (Mac) or MoBaXTerm (Windows) to copy files from the local machine to the VM instance
 ![](images/35.png)
