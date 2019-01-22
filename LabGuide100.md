@@ -40,13 +40,13 @@ For this lab you will need:
   ![](images/createinstance.png)
 
 5. Enter the following values in the Create Instance dialog
-(1)	**Name**: XX_OL610 (Replace XX with your initials)
-(2)	**Image Operating System**: Oracle Linux 7.6 
-  ![](images/createinstance2.png)
-(3)	**SSH Keys**: Choose SSH Key Files
-(4)	Click on **Browse** and select the local public key (e.g. oci_instance.pub)
-(5) Keep all other values to default and click on **Create Instance**. After several minutes, your new Oracle Linux instance will be running
-  ![](images/createinstance3.png)
+    (1)	**Name**: XX_OL610 (Replace XX with your initials)
+    (2)	**Image Operating System**: Oracle Linux 7.6 
+    ![](images/createinstance2.png)
+    (3)	**SSH Keys**: Choose SSH Key Files
+    (4)	Click on **Browse** and select the local public key (e.g. oci_instance.pub)
+    (5) Keep all other values to default and click on **Create Instance**. After several minutes, your new Oracle Linux instance will be running
+    ![](images/createinstance3.png)
 
   **NOTE** Your Oracle Linux is now ready for the Gateway installation. Click on the newly created instance and note down the primary information, such as Private and Public IP Address. 
   ![](images/.png)
@@ -172,11 +172,11 @@ For this lab you will need:
   ![](images/user.png)
   
     6.2 Enter:
-**First Name**: XXX (e.g. API)
-**Last Name**: XXX (e.g. Manager)
-**User Name**: XXX (e.g. API_Mgr_User or use your email as username)
-**Email**: Make sure you enter a real email, as you will immediately receive and email to activate your user account and set the password.
-  ![](images/createuser.png)
+    **First Name**: XXX (e.g. API)
+    **Last Name**: XXX (e.g. Manager)
+    **User Name**: XXX (e.g. API_Mgr_User or use your email as username)
+    **Email**: Make sure you enter a real email, as you will immediately receive and email to activate your user account and set the password.
+    ![](images/createuser.png)
 
     6.3 Click **Next**, and choose the Manager’s group that you created previously, then click **Finish**
   ![](images/createuser2.png)
@@ -211,7 +211,7 @@ For this lab you will need:
 ## STEP 7: Deploy an API Gateway – Install and configure Physical API Gateway
 
 1. Use a File Transfer tool such as FileZilla (Mac) or MoBaXTerm (Windows) to copy files from the local machine to the VM instance
-  ![](images/filezila.png)
+    ![](images/filezila.png)
 
 2. Open your Terminal(Mac) or Command Line(Windows). Change the directory to the location for the SSH keys
   ![](images/terminal.png)
@@ -222,7 +222,6 @@ For this lab you will need:
 
 4. Additionally, run the following command to open the firewall of your instance:
     **$ iptables -I INPUT 1 -p tcp --dport 8011 -j ACCEPT**
-    
     **$ iptables -I INPUT 1 -p tcp --dport 9022 -j ACCEPT**
 
   
@@ -232,11 +231,9 @@ For this lab you will need:
   
     -- Copy the JDK file to the OL instance in the folder **/home/opc/java** using FileZila
   
-    -- Install the JDK 
-        **$ sudo yum localinstall jdk-8u181-linux-x64.rpm**
+    -- Install the JDK: **$ sudo yum localinstall jdk-8u181-linux-x64.rpm**
   
-    -- Verify the JDK is installed under **/usr/java/jdk1.8.0_181-amd64**
-        **$ java -version**
+    -- Verify the JDK is installed under **/usr/java/jdk1.8.0_181-amd64**: **$ java -version**
   
     -- Set **JAVA_HOME**. Edit the **.bash_profile**
         ![](images/javahome2.png)
