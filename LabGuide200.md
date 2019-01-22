@@ -2,34 +2,26 @@
 
 
 
-**After you finished installing gateway on OCI Compute, the next step is to create API and deploy the gateway to the API.**
-
-**Step 1:** Click on the Environment Link **Login to Cloud Services Dashboard** to open the **Cloud Console**
+**Stay on the API Platform Cloud,the next step is to create API and deploy the gateway to the API.**
 
 
-**Step 2:** In the Cloud My Services Dashboard Click on **API Platform** and then Click on **Open Service Console**
-  
-  ![](images/Picture1.png)
- 
-**Step 3:** Under the Instances find APIPCS Instance (Eg: BlrAPIPCSInstance). Click on the Hamburger Menu and click on **Open API Portal Console** to open API Platform Cloud - Management Portal
+**Step 1:** Choose **APIs** on the API Platform Cloud, and click on **Create** on the top right
+	![](images/xxx.png)
 
-![](images/Picture2.png)
+**Step 2:** Fill out the form:
 
-**Step 4:** Click on **Create API** on the top right
+	![](images/xxx.png)
 
-![](images/Picture3.png)
+**Step 3:** Your new API is created now, and click on it
+	![](images/xxx.png)
+	
+**Step 4** Configure the API Request:
 
-**Step 5:** Enter Name (Eg: TicketService05), Version as 1.0, populate the description field in this form as you would like (optional) and click **Create**
-
-![](images/Picture4.png)
-
-**Step 6:** To configure the API Request:
-
-   a. From the APIs tab, click the TicketService<nn> API you created in the previous task
+   	a. From the APIs tab, click the TicketService<nn> API you created in the previous task
    
-   ![](images/Picture5.png)
+   	![](images/Picture5.png)
    
-   b. Click on API Implementation
+   	b. Click on API Implementation
    
    ![](images/Picture6.png)
    
