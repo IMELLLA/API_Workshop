@@ -56,7 +56,7 @@
 
 
 
-Helpful Resource:
+##Helpful Resource##
 Setup Oracle API Gateway on OCI-Classic in Oracle Public Cloud
 http://www.ateam-oracle.com/setup-oracle-api-gateway-on-oci-classic-in-oracle-public-cloud
 
