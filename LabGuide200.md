@@ -15,7 +15,7 @@
 **Step 3:** Your new API is created now, and click on it
 	![](images/xxx.png)
 	
-**Step 4** Configure the API Request:
+**Step 4:** Configure the API Request:
 
    	a. From the APIs tab, click the TicketService<nn> API you created in the previous task
    
