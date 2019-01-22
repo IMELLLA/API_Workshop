@@ -8,7 +8,7 @@
 **Step 1:** Choose **APIs** on the API Platform Cloud, and click on **Create** on the top right
 	![](images/apipc.png)
 
-**Step 2:** Fill out the form
+**Step 2:** the creating API page will open and fill out the form 
 	![](images/createapi.png)
 
 **Step 3:** Your new API is created now, and click on it
