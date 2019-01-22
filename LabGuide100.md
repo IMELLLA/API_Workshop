@@ -51,6 +51,7 @@ For this lab you will need:
   **NOTE** Your Oracle Linux is now ready for the Gateway installation. Click on the newly created instance and note down the primary information, such as Private and Public IP Address. 
   ![](images/.png)
 
+
 ## STEP 2: Create a Console Connection for Mac User 
 
  We will now create a Console Connection, which allows us to use an SSH connection to the instance host. 
@@ -69,6 +70,7 @@ For this lab you will need:
 > Save a note of your **public IP** and **private IP** of your instance here, which will be needed soon. 
   ![](images/ips.png)
 
+
 ## STEP 3: Allow inbound connections to the Linux instance
 1. Stay on the Instance detial page, click on the **Subnet**
   ![](images/subnet.png)
@@ -82,6 +84,7 @@ For this lab you will need:
 4. The rules page will open which contains 3 default rules and **Add Ingress Rule**
   ![](images/ingressrule.png)
   ![](images/ingressrule2.png)
+
 
 
 
@@ -147,6 +150,8 @@ For this lab you will need:
 14. In Step 4. Click **Download file** to get the configuration properties file. Then, click **Done** to finish
   ![](images/node4.png)
 
+
+
 ## STEP 5 : Add API Manager and Developer Groups and Users (optional)
 
  You need to be admin roles to be able to create different types of groups and users in Oracle Identity Cloud Service (IDCS)
@@ -184,6 +189,7 @@ For this lab you will need:
     > You should get a successful message. Similarly, you can create multiple users based on your need. 
 
 
+
 ## STEP 6: Give Group/User Access to the API 
 
 1. Go back to the top left burger menu and select **Applications**
@@ -208,6 +214,7 @@ For this lab you will need:
 -- Client Secret
   ![](images/client.png)
   
+
 ## STEP 7: Deploy an API Gateway – Install and configure Physical API Gateway
 
 1. Use a File Transfer tool such as FileZilla (Mac) or MoBaXTerm (Windows) to copy files from the local machine to the VM instance
@@ -277,6 +284,7 @@ For this lab you will need:
 
     >Note: For some reason I got an error saying that it could not find the original Gateway (100) that I originally indicated in the gateway-props.json. I don’t know why? I got around it by saying yes when it asked me to create-join instead. I will investigate this issue and come back here. In the meantime, selecting y + [ENTER] to create-join the node instead got me going to the end.
     
+
 ## Step 8: Approve the Node on API Platform
 
   1. Go back to the API Platform Managers Portal and click on the new node. You should find a pending registration node
